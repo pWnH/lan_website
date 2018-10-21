@@ -4,8 +4,8 @@
     <p>
       Hier die Liste mit Spielen:
     </p>
-    <form name="Spiele" action="/" data-netlify="true"
-    data-netlify-honeypot="bot-field">
+    <form method="post" action="/" netlify>
+    <input type="hidden" name="form-name" value="games" />
       <div class="cards-container">
         <game-card v-for="game in games" :key="game.title" :game="game"/>
       </div>
