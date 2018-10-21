@@ -68,6 +68,7 @@ export default {
 
     .game-card:hover {
         border-color: var(--primary-color);
+        cursor: pointer;
         .game-desc {
             height: auto;
             opacity: 1;

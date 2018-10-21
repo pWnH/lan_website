@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img class="home-banner" alt="Könnte geil werden." src="https://static.giga.de/wp-content/uploads/2017/01/GGA_Dreamhack-rcm992x0.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -16,3 +16,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.home-banner {
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+</style>

@@ -39,10 +39,12 @@
   */
   --spacing: 10px;
   --border-radius: 4px;
-
+  --font-family: 'Titillium Web', sans-serif;
 }
 
-
+*:not(label) {
+  box-sizing: border-box;
+}
 body {
   background-color: var(--background-color);
   color: #fcfaf1;
@@ -53,7 +55,7 @@ body {
 
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -163,5 +165,7 @@ p {
   color: var(--background-color);
   background-color: var(--secondary-color);
   text-align: left;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(50,50,93,.3), 0 5px 15px rgba(0,0,0,.07);
 }
 </style>

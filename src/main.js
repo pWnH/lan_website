@@ -4,6 +4,8 @@ import router from './router'
 
 import '@fortawesome/fontawesome-free/css/all.css';
 
+import './assets/fonts/TitilliumWeb-Black.ttf';
+
 Vue.config.productionTip = false
 
 new Vue({

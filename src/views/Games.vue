@@ -1,8 +1,8 @@
 <template>
   <div class="games-wrapper">
-    <h1>Spiele</h1>
+    <h1 class="gradient-title">Spiele</h1>
     <p>
-      Hier die Liste mit Spielen:
+      Hier die Liste mit Spielen. Wähle die Spiele aus die du gerne auf der LAN spielen würdest. Falls dein Lieblings-LAN-Spiel nicht dabei ist trag es einfach unten ein!
     </p>
     <form method="post" action="/saved" netlify>
     <input type="hidden" name="form-name" value="games" />
@@ -10,6 +10,8 @@
         <game-card v-for="game in games" :key="game.title" :game="game"/>
       </div>
       <br>
+      <label for="extra-games">Dein Lieblingsspiel nicht dabei? Trage hier weitere Vorschläge ein!</label>
+      <textarea id="extra-games" name="extra-games"/>
       <br>
       <button class="btn-primary">Auswahl abschicken</button>
     </form>
@@ -55,4 +57,21 @@ export default {
     justify-self: center;
   }
 }
+
+textarea {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--font-color-light);
+  border-radius: var(--border-radius);
+  font-size: 18px;
+  width: 100%;
+  resize: vertical;
+}
+// .gradient-title {
+//   background-image: linear-gradient(to right, #343434, #565656, #7b7b7b, #a1a1a1, #cacaca);
+//   color: white;
+//   padding: 10px;
+//   position: absolute;
+//   width: 100%;
+// }
 </style>
