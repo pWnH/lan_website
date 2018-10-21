@@ -4,7 +4,7 @@
     <p>
       Hier die Liste mit Spielen:
     </p>
-    <form method="post" action="/" netlify>
+    <form method="post" action="/saved" netlify>
     <input type="hidden" name="form-name" value="games" />
       <div class="cards-container">
         <game-card v-for="game in games" :key="game.title" :game="game"/>
