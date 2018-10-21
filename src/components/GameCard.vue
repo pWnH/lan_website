@@ -1,7 +1,7 @@
 <template>
     <label class="game-card" :class="{'checked': checked}">
         <img class="game-img" :src="game.img"/>
-        <input type="checkbox" v-model="checked" :name="game.title">
+        <input type="checkbox" v-model="checked" :name="game.id">
         {{game.title}}
     </label>
 </template>

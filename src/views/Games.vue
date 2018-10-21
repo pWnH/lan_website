@@ -4,7 +4,7 @@
     <p>
       Hier die Liste mit Spielen:
     </p>
-    <form name="Spiele" netlify>
+    <form name="Spiele" action="/home" netlify>
       <div class="cards-container">
         <game-card v-for="game in games" :key="game.title" :game="game"/>
       </div>
@@ -23,14 +23,17 @@ export default {
       games: [
         {
           title: 'CounterStrike 1.6',
+          id: 'cs-16',
           img: 'http://fc07.deviantart.net/fs70/f/2014/108/b/d/counter_strike_1_6_icon_by_dudekpro-d7f0049.png',
         },
         {
           title: 'Counterstrike Global Offensive',
+          id: 'csgo',
           img: 'https://vignette.wikia.nocookie.net/cswikia/images/0/0c/Csgo-payback-icon.png/revision/latest?cb=20141112151119',
         },
         {
           title: 'Warcraft 3',
+          id: 'wc3',
           img: 'http://icons.iconarchive.com/icons/3xhumed/mega-games-pack-18/256/Warcraft-3-Frozen-Throne-1-icon.png',
         },
       ]
