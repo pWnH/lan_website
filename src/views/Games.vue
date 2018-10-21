@@ -4,7 +4,7 @@
     <p>
       Hier die Liste mit Spielen:
     </p>
-    <form name="Spiele" action="/home" data-netlify="true"
+    <form name="Spiele" action="/" data-netlify="true"
     data-netlify-honeypot="bot-field">
       <div class="cards-container">
         <game-card v-for="game in games" :key="game.title" :game="game"/>
