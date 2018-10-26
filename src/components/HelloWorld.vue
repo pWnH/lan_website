@@ -2,16 +2,15 @@
   <div class="hello">
     <h1>Hallo!</h1>
     <p>Wilkommen zur SUPER-DUPER-LAN!</p>
-        <form method="post" netlify>
-    <input type="hidden" name="form-name" value="games" />
-      <div class="cards-container">
-        <game-card v-for="game in games" :key="game.title" :game="game"/>
-      </div>
+        <form method="post" action="/" netlify>
+    <input type="hidden" name="form-name" value="testform_" />
+      <input type="text" name="yourname"/>
+      <input type="email" name="youremail"/>
       <br>
       <label for="extra-games">Dein Lieblingsspiel nicht dabei? Trage hier weitere Vorschläge ein!</label>
       <textarea id="extra-games" name="extra-games"/>
       <br>
-      <button class="btn-primary">Auswahl abschicken</button>
+      <button type="submit" class="btn-primary">Auswahl abschicken</button>
     </form>
   </div>
 </template>
