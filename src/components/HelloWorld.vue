@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>Hallo!</h1>
     <p>Wilkommen zur SUPER-DUPER-LAN!</p>
-        <form method="post" action="/" netlify>
+        <form method="post" data-netlify="true">
     <input type="hidden" name="form-name" value="testform_" />
       <input type="text" name="yourname"/>
       <input type="email" name="youremail"/>
