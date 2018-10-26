@@ -17,17 +17,17 @@ export default new Router({
       path: '/games',
       name: 'games',
       // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
+      // this generates a separate chunk (games.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/Games.vue')
+      component: () => import(/* webpackChunkName: "games" */ './views/Games.vue')
     },
     {
       path: '/saved',
       name: 'saved',
       // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
+      // this generates a separate chunk (saved.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/Saved.vue')
+      component: () => import(/* webpackChunkName: "saved" */ './views/Saved.vue')
     },
 
 
