@@ -4,7 +4,7 @@
     <p>
       Hier die Liste mit Spielen. Wähle die Spiele aus die du gerne auf der LAN spielen würdest. Falls dein Lieblings-LAN-Spiel nicht dabei ist trag es einfach unten ein!
     </p>
-    <form method="post" action="/saved" netlify>
+    <form method="post" netlify>
     <input type="hidden" name="form-name" value="games" />
       <div class="cards-container">
         <game-card v-for="game in games" :key="game.title" :game="game"/>
