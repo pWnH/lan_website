@@ -21,9 +21,10 @@
 <script>
 import GameCard from "@/components/GameCard.vue";
 export default {
-  data() {
-    return {
-      games: [
+  data(){
+    return{
+      games
+      :[
         {
           title: 'CounterStrike 1.6',
           id: 'cs-16',
@@ -43,7 +44,7 @@ export default {
     }
   },
   methods: {
-     handleSubmit(e) {
+     handleSubmit() {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
