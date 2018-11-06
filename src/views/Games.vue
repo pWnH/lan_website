@@ -23,8 +23,7 @@ import GameCard from "@/components/GameCard.vue";
 export default {
   data(){
     return{
-      games
-      :[
+      games: [
         {
           title: 'CounterStrike 1.6',
           id: 'cs-16',

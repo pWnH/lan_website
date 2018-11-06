@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "lynt"
+    "lint": "lynt",
+    "precommit": "lint-staged && npm run lint"
   },
   "dependencies": {
     "prerender-spa-plugin": "^3.4.0",
@@ -50,10 +51,10 @@
     "not ie <= 8"
   ],
   "gitHooks": {
-    "pre-commit": "lint-staged && npm run lint"
+    "pre-commit": "precommit"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
+    "*.{js,css,md}": [
       "prettier --config .prettierrc --write",
       "git add"
     ],
