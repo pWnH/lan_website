@@ -42,6 +42,24 @@ export default {
       ]
     }
   },
+  methods: {
+     handleSubmit(e) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({
+          "form-name": "ask-question",
+          ...this.form
+        })
+      })
+        .then(() => {
+          this.$router.push("saved");
+        })
+        .catch(() => {
+          this.$router.push("home");
+        });
+    }
+  },
   components: {
     GameCard
   }

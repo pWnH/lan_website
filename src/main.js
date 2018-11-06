@@ -4,7 +4,9 @@ import router from './router'
 
 import '@fortawesome/fontawesome-free/css/all.css';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+console.log('test');
 
 new Vue({
   router,
