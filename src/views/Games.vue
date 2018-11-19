@@ -4,7 +4,10 @@
     <p>
       Hier die Liste mit Spielen. Wähle die Spiele aus die du gerne auf der LAN spielen würdest. Falls dein Lieblings-LAN-Spiel nicht dabei ist trag es einfach unten ein!
     </p>
-    <form action="/mail" netlify name="games">
+    <form action="/mail" netlify netlify-honeypot="bot-field" name="games">
+      <p class="hidden">
+        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+      </p>
       <div class="cards-container">
         <game-card v-for="game in games" :key="game.title" :game="game"/>
       </div>
@@ -41,24 +44,6 @@ export default {
       ]
     }
   },
-  methods: {
-     handleSubmit() {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: this.encode({
-          "form-name": "ask-question",
-          ...this.form
-        })
-      })
-        .then(() => {
-          this.$router.push("saved");
-        })
-        .catch(() => {
-          this.$router.push("home");
-        });
-    }
-  },
   components: {
     GameCard
   }
@@ -83,6 +68,9 @@ textarea {
   font-size: 18px;
   width: 100%;
   resize: vertical;
+}
+p.hidden {
+  display: none;
 }
 // .gradient-title {
 //   background-image: linear-gradient(to right, #343434, #565656, #7b7b7b, #a1a1a1, #cacaca);
