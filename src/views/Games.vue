@@ -4,7 +4,7 @@
     <p>
       Hier die Liste mit Spielen. Wähle die Spiele aus die du gerne auf der LAN spielen würdest. Falls dein Lieblings-LAN-Spiel nicht dabei ist trag es einfach unten ein!
     </p>
-    <form action="https://dislack.com/send/5c9d08edefcb985e299b58ee" >
+    <form action="https://dislack.com/send/5c9d08edefcb985e299b58ee" method="POST">
       <input type="hidden" name="form-name" value="games">
       <p class="hidden">
         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
